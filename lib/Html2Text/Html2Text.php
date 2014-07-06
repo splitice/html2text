@@ -602,8 +602,9 @@ class Html2Text
     {
         switch (strtolower($matches[1])) {
             case 'b':
-            case 'strong':
                 return $this->_toupper($matches[3]);
+            case 'strong':
+                return $matches[3];
             case 'th':
                 return $this->_toupper("\t\t" . $matches[3] . "\n");
             case 'h':
